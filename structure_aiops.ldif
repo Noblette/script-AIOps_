@@ -1,0 +1,106 @@
+# 1. Unités Organisationnelles (OU)
+dn: ou=Utilisateurs,dc=aiops,dc=local
+objectClass: organizationalUnit
+ou: Utilisateurs
+
+dn: ou=Equipes,dc=aiops,dc=local
+objectClass: organizationalUnit
+ou: Equipes
+
+# 2. Ingénieurs / Techniciens (inetOrgPerson)
+dn: uid=r.Julien,ou=Utilisateurs,dc=aiops,dc=local
+objectClass: inetOrgPerson
+uid: r.Julien
+sn: Julien
+givenName: Rina
+cn: Rina Julien
+title: Administrateur Base de Donnees (DBA)
+mail: rina.Julien@aiops.local
+userPassword: pass123
+
+dn: uid=t.rasoa,ou=Utilisateurs,dc=aiops,dc=local
+objectClass: inetOrgPerson
+uid: t.rasoa
+sn: Rasoa
+givenName: Tiana
+cn: Tiana Rasoa
+title: Ingenieur Securite SI (SecOps)
+mail: tiana.rasoa@aiops.local
+userPassword: pass123
+
+dn: uid=m.John,ou=Utilisateurs,dc=aiops,dc=local
+objectClass: inetOrgPerson
+uid: m.John
+sn: John
+givenName: Mamy
+cn: Mamy John
+title: Ingenieur Production et Exploitation
+mail: mamy.John@aiops.local
+userPassword: pass123
+
+dn: uid=f.Eliane,ou=Utilisateurs,dc=aiops,dc=local
+objectClass: inetOrgPerson
+uid: f.Eliane
+sn: Eliane
+givenName: Fenotoky
+cn: Fenotoky Eliane
+title: Lead Ingenieur DevOps
+mail: fenotokynoblette@gmail.com
+userPassword: pass123
+
+dn: uid=h.andriam,ou=Utilisateurs,dc=aiops,dc=local
+objectClass: inetOrgPerson
+uid: h.andriam
+sn: Andriam
+givenName: Hery
+cn: Hery Andriam
+title: Administrateur Reseau (NetOps)
+mail: hery.andriam@aiops.local
+userPassword: pass123
+
+dn: uid=s.Valerie,ou=Utilisateurs,dc=aiops,dc=local
+objectClass: inetOrgPerson
+uid: s.Valerie
+sn: Valerie
+givenName: Soa
+cn: Soa Valerie
+title: Technicien Support Applicatif N1
+mail: soa.Valerie@aiops.local
+userPassword: pass123
+
+# 3. Groupes Métiers ITIL (groupOfNames)
+dn: cn=Equipe-DBA,ou=Equipes,dc=aiops,dc=local
+objectClass: groupOfNames
+cn: Equipe-DBA
+description: Equipe Administration Bases de Donnees
+member: uid=r.Julien,ou=Utilisateurs,dc=aiops,dc=local
+
+dn: cn=Equipe-SecOps,ou=Equipes,dc=aiops,dc=local
+objectClass: groupOfNames
+cn: Equipe-SecOps
+description: Equipe Securite Operationnelle
+member: uid=t.rasoa,ou=Utilisateurs,dc=aiops,dc=local
+
+dn: cn=Equipe-Production,ou=Equipes,dc=aiops,dc=local
+objectClass: groupOfNames
+cn: Equipe-Production
+description: Equipe Production et Infrastructure
+member: uid=m.John,ou=Utilisateurs,dc=aiops,dc=local
+
+dn: cn=Equipe-DevOps,ou=Equipes,dc=aiops,dc=local
+objectClass: groupOfNames
+cn: Equipe-DevOps
+description: Equipe Ingenierie Applicative et DevOps
+member: uid=f.Eliane,ou=Utilisateurs,dc=aiops,dc=local
+
+dn: cn=Equipe-Reseau,ou=Equipes,dc=aiops,dc=local
+objectClass: groupOfNames
+cn: Equipe-Reseau
+description: Equipe Administration Reseau
+member: uid=h.andriam,ou=Utilisateurs,dc=aiops,dc=local
+
+dn: cn=Support-Applicatif,ou=Equipes,dc=aiops,dc=local
+objectClass: groupOfNames
+cn: Support-Applicatif
+description: Equipe Support Applicatif Niveau 1
+member: uid=s.Valerie,ou=Utilisateurs,dc=aiops,dc=local

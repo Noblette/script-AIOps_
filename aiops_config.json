@@ -1,0 +1,63 @@
+{
+  "dossier_scan_racine": "/home/fenotoky/Documents",
+  "dossiers_ignores": [
+    "vendor",
+    "node_modules",
+    ".git",
+    ".venv",
+    "venv",
+    "cache",
+    "target",
+    "incidents",
+    "aiops_data",
+    "Archives log avant par jour Noble",
+    "document Noblette"
+  ],
+  "mots_cles_fichiers_ignores": [
+    "rapport_analyses",
+    "rapport_multilog",
+    "incident_",
+    "installation",
+    "stderr",
+    "access"
+  ],
+  "niveaux_critiques": ["WARN", "WARNING", "ERROR", "CRITICAL", "FATAL", "ALERT", "EMERGENCY"],
+ "routage_domaines": {
+    "BASE_DE_DONNEES": {
+      "categorie_glpi": "Base de données",
+      "groupe_glpi": "Equipe-DBA",
+      "utilisateurs_glpi": ["r.Julien"],
+      "emails_equipe": ["rina.Julien@aiops.local"]
+    },
+    "SECURITE": {
+      "categorie_glpi": "Sécurité",
+      "groupe_glpi": "Equipe-SecOps",
+      "utilisateurs_glpi": ["t.rasoa"],
+      "emails_equipe": ["tiana.rasoa@aiops.local"]
+    },
+    "PRODUCTION": {
+      "categorie_glpi": "Production",
+      "groupe_glpi": "Equipe-Production",
+      "utilisateurs_glpi": ["m.John"],
+      "emails_equipe": ["mamy.John@aiops.local"]
+    },
+    "APPLICATION": {
+      "categorie_glpi": "Application",
+      "groupe_glpi": "Equipe-DevOps",
+      "utilisateurs_glpi": ["f.Eliane"],
+      "emails_equipe": ["fenotokynoblette@gmail.com"]
+    },
+    "RESEAU": {
+      "categorie_glpi": "Réseau",
+      "groupe_glpi": "Equipe-Reseau",
+      "utilisateurs_glpi": ["h.andriam"],
+      "emails_equipe": ["hery.andriam@aiops.local"]
+    },
+    "AUTRE": {
+      "categorie_glpi": "Support applicatif",
+      "groupe_glpi": "Support-Applicatif",
+      "utilisateurs_glpi": ["s.Valerie"],
+      "emails_equipe": ["soa.Valerie@aiops.local"]
+    }
+  }
+}
